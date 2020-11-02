@@ -5,9 +5,10 @@ from sklearn import metrics
 import numpy as np
 import random
 import sys
+import logging
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
-vectors=np.load("Biobert_vectors.npy")
+vectors=np.load("Biobert_Title_Abstract.npy")
 vectors = scaler.fit_transform(vectors)
 nc = [5,10,15,20,40]
 kmeans = []
