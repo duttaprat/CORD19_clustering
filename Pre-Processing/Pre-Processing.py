@@ -134,3 +134,13 @@ for index, row in covid_df.iterrows():
 covid_df.dropna(inplace=True)
 covid_df.reset_index(drop=True,inplace=True)
 covid_df.to_pickle("Cord19.pkl")
+
+clean_df["Title_Abstract"] = clean_df["title"] + clean_df["abstract"]
+selected_columns = clean_df[["paper_id","Title_Abstract"]]
+covid_df = selected_columns.copy()
+for index, row in covid_df.iterrows(): 
+  row['paper_id']='text '+str(index+1)
+covid_df.dropna(inplace=True)
+covid_df.reset_index(drop=True,inplace=True)
+covid_df.to_pickle("Biobert_Title_Abstract.pkl")
+
