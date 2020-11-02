@@ -38,7 +38,7 @@ for i, row in covid_df.iterrows():
 1.   Model 1.1: Taking mean
 2.   Model 1.2: Taking sum of context words
 
-**Model 1.1**
+**Model 1.1: Notable Results found with only this model henceforth.**
 
 """
 
