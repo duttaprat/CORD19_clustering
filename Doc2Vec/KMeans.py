@@ -25,21 +25,3 @@ X1 = scaler.fit_transform(model1_dm_300)
 kmeans = []
 kmeans = [KMeans(n_clusters = i, n_init = 1000, max_iter = 3000) for i in nc]
 Kmeans(kmeans,nc,X1,name="model1_dm_300")
-
-model1_dbow_300=np.load("/.../model1_dbow_300.docvecs.vectors_docs.npy")
-X2 = scaler.fit_transform(model1_dbow_300)
-kmeans = []
-kmeans = [KMeans(n_clusters = i, n_init = 2000, max_iter = 6000) for i in nc]
-Kmeans(kmeans,nc,X2,name="model1_dbow_300")
-
-model2_dm_300=np.load("/.../model2_dm_300.docvecs.vectors_docs.npy")
-X3 = scaler.fit_transform(model2_dm_300)
-kmeans = []
-kmeans = [KMeans(n_clusters = i, n_init = 2000, max_iter = 6000) for i in nc]
-Kmeans(kmeans,nc,X3,name="model2_dm_300")
-
-model2_dbow_300=np.load("/.../model2_dbow_300.docvecs.vectors_docs.npy")
-X4 = scaler.fit_transform(model2_dbow_300)
-kmeans = []
-kmeans = [KMeans(n_clusters = i, n_init = 2000, max_iter = 6000) for i in nc]
-Kmeans(kmeans,nc,X4,name="model2_dbow_300")
